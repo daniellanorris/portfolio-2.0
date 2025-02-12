@@ -1,18 +1,19 @@
 import React from "react";
-import Image from "next/image";
-
+import "../src/app/globals.css";
 
 export default function Card({ items }) {
     return (
-        <div className="card">
-            {items.map((info, index) => (
-                <div key={index}>
-                    <div> {info[1]}</div>
-                    <h2>{info[0]}</h2>
-                    <p>{info[2]}</p>
-                    <p>{info[3]}</p>
-                </div>
-            ))}
-        </div>
+      <div className="p-10 m-6">
+        {items.map((info, index) => (
+          <div
+            key={index}
+            className="border border-white-10 rounded-2xl p-4 m-6 flex-wrap hover:outline-2">
+              <div className="p-6"> {info[1]}</div>
+              <h1 className="p-4">{info[0]}</h1>
+              <div className="p-6">{info[2]}</div>
+              <p className="p-4">{info[3]}</p>
+          </div>
+        ))}
+      </div>
     );
-}
+  }

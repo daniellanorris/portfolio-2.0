@@ -1,9 +1,10 @@
 import React from "react";
+import Footer from 'react-dom'
 
-export default function Footer() {
+export default function FooterElement() {
   return (
     <>
-      <footer className="p-10 footer bg-neutral text-neutral-content center"> Test </footer>
+      <Footer className="p-10 footer bg-neutral text-neutral-content center"> Test </Footer>
     </>
   )
 };
