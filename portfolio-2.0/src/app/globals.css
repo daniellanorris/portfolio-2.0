@@ -1524,7 +1524,6 @@ h1 {
 }
 html, body {
   max-width: 100vw;
-  overflow-x: hidden;
 }
 body {
   color: var(--foreground);
@@ -1537,10 +1536,7 @@ body {
   font-family: 'Plus Jakarta Sans';
   font-weight: 400;
 }
-a {
-  color: inherit;
-  text-decoration: none;
-}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

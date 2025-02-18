@@ -3,7 +3,7 @@ import "../src/app/globals.css";
 
 export default function Card({ items }) {
     return (
-      <div className="p-10 m-6">
+      <div>
         {items.map((info, index) => (
           <div
             key={index}
@@ -11,7 +11,7 @@ export default function Card({ items }) {
               <div className="p-6"> {info[1]}</div>
               <h1 className="p-4">{info[0]}</h1>
               <div className="p-6">{info[2]}</div>
-              <p className="p-4">{info[3]}</p>
+              <div className="p-4">{info[3]}</div>
           </div>
         ))}
       </div>

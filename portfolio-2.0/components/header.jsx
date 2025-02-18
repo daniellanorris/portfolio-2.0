@@ -1,13 +1,61 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [burgerHover, setBurgerHover] = useState(false);
+
+  const handleClick = () => {
+    isOpen ? setIsOpen(false) : setIsOpen(true);
+
+  };
+
+  const handleHoverBurger = () => {
+    burgerHover ? setBurgerHover(false) : setBurgerHover(true);
+  };
+
+  const clearContext = () => {
+    isOpen(false);
+    localStorage.removeItem(isOpen);
+  };
+
+  useEffect(() => {
+    window.addEventListener("beforeunload", clearContext);
+  }, []);
+
   return (
     <>
-      <header className="navbar bg-neutral text-neutral-content">
-        <Link href="/" className="btn btn-ghost normal-case text-xl">Home</Link>
-        <Link href="/portfolio" className="btn btn-ghost normal-case text-xl">Portfolio</Link>
-        <Link href="/certifications" className="btn normal-case text-xl">Certifications</Link>
+      <header className="navbar absolute">
+        <img
+          src={burgerHover ? "./burger-fuchsia.svg" : "./burger.svg"}
+          width={40}
+          height={40}
+          alt="burger menu"
+          onClick={handleClick}
+          onMouseEnter={handleHoverBurger}
+          onMouseLeave={handleHoverBurger}
+          className={`${isOpen ?  "z-12 absolute bg-black rounded" : ""}`}></img>
+        <div className={`${isOpen ? "z-10" : "hidden"}`}>
+          <div className="flex flex-col m-2 border p-8 rounded border-white bg-white text-black">
+          <Link
+            href="/"
+            className="btn normal-case text-xl hover:text-fuchsia-300">
+            Home
+          </Link>
+          <Link
+            href="/portfolio"
+            className="btn btn-ghost normal-case text-xl  hover:text-fuchsia-300">
+            Portfolio
+          </Link>
+          <Link
+            href="/certifications"
+            className="btn normal-case text-xl  hover:text-fuchsia-300">
+            Certifications
+          </Link>
+          </div>
+        </div>
       </header>
     </>
   );
