@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="navbar absolute">
+      <header className="navbar absolute z-20">
         <img
           src={burgerHover ? "./burger-fuchsia.svg" : "./burger.svg"}
           width={40}
@@ -53,6 +53,11 @@ export default function Header() {
             href="/certifications"
             className="btn normal-case text-xl  hover:text-fuchsia-300">
             Certifications
+          </Link>
+          <Link
+            href="/listening"
+            className="btn normal-case text-xl  hover:text-fuchsia-300">
+            Listening
           </Link>
           </div>
         </div>

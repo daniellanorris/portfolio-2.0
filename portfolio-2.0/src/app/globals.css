@@ -33,7 +33,6 @@ h1 {
   height: 1px;
   padding: 0;
   margin: -1px;
-  overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
@@ -1273,7 +1272,6 @@ h1 {
   }
 }
 .outline {
-  outline-style: var(--tw-outline-style);
   outline-width: 1px;
 }
 .blur-none {
@@ -1718,11 +1716,7 @@ body {
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
+
 @property --tw-blur {
   syntax: "*";
   inherits: false;
