@@ -31,12 +31,6 @@ export default async function Spotify(method) {
         return null;
       }
 
-    case 'POST':
-      // Placeholder for future POST request
-      return "POST request not implemented yet.";
 
-    default:
-      console.error("Invalid method provided.");
-      return null;
   }
 }

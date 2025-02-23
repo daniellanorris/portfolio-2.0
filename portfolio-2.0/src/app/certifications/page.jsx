@@ -31,7 +31,7 @@ export default function Certifications() {
         width={80}
         height={80}
         src="/AWS_Cert.png"
-        alt="AWS Certification"
+        alt="Datadog Certification"
       />,
       <div>
         <a
@@ -71,7 +71,7 @@ export default function Certifications() {
 
   return (
     <div className={`${styles.page} p-30 m-auto`}>
-      <h1>Certifications</h1>
+      <h1>CERTIFICATIONS </h1>
       <main className={styles.main}>
         <div>
           <Card items={certifications} />

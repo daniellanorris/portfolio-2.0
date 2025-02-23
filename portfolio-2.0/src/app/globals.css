@@ -2,6 +2,7 @@
 
 @import "tailwindcss";
 
+
 .\@container {
   container-type: inline-size;
 }
@@ -1282,6 +1283,7 @@ h1 {
   --tw-drop-shadow:  ;
   filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
 }
+
 .grayscale {
   --tw-grayscale: grayscale(100%);
   filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
@@ -1530,9 +1532,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-* {
+p, h2 {
   font-family: 'Plus Jakarta Sans';
   font-weight: 400;
+}
+
+h1 {
+  font-family: "Darumadrop One", serif;
+  font-weight: 400;
+  font-style: normal;
+
 }
 
 @media (prefers-color-scheme: dark) {

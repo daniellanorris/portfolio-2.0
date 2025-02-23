@@ -1,12 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import SpotifyPlaylist from "../src/app/api/[playlistId]/page.js";
+import SpotifyPlaylist from "../src/app/api/playlist/page.js";
 import Image from "next/image";
 
 export default function Playlist() {
   const [data, setData] = useState([]);
-  const [face, setFace] = useState(true);
 
   useEffect(() => {
     const fetchPlaylist = async () => {
@@ -22,37 +21,40 @@ export default function Playlist() {
     fetchPlaylist();
   }, []);
 
-
-
   return (
     <>
       {data.length === 0 ? (
-        <p>Loading playlist...</p>
+        <>
+        <svg className="mr-3 size-5 animate-spin bg-white" viewBox="0 0 24 24" color="white"></svg>
+        </>
       ) : (
-        // data?.map((item) => (
-        <div key={data.id}>
-          <div onClick={setFace(true)}>
-            <Image
-              src={data.images[0].url}
-              height="40"
-              width="40"
-              alt="Album Art"
-            />
-          </div>
-          <div>
-            <h2>{data.name}</h2>
-            <p>{data.description}</p>
-            <ul className="scroll-smooth snap-mandatory snap-x">
-              Tracks:
-              {data.tracks?.items.map((track) => (
-                <li key={track.track.id} className="snap-center">
-                  {track.track.name} - {track.track.artists[0].name}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="w-[75vw] flex overflow-x-scroll snap-x snap-mandatory max-w-6xl">
+          {data.map((item) => (
+            <div key={item.id} className="group h-96 w-96 flex-shrink-0 snap-center justify-center items-center m-10">
+              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
+                  <Image
+                    src={item.images[0].url}
+                    layout="fill"
+                    objectFit="cover"
+                    alt="Album Art"
+                    className="rounded-xl"
+                  />
+                </div>
+                <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-scroll">
+                  <h1 className="p-10">{item.name}</h1>
+                  <ul className="scroll-smooth snap-mandatory snap-x">
+                    {item.tracks?.items.map((track) => (
+                      <li key={track.track.id} className="snap-center even:bg-gray-950 odd:bg-gray-900">
+                        {track.track.name} - <em>{track.track.artists[0].name}</em>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-        // ))
       )}
     </>
   );

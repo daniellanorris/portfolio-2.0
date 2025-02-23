@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="navbar absolute z-20">
+      <header className="navbar sticky z-20 top-0 ">
         <img
           src={burgerHover ? "./burger-fuchsia.svg" : "./burger.svg"}
           width={40}
