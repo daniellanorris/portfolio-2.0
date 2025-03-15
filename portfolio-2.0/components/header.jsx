@@ -17,7 +17,7 @@ export default function Header() {
   };
 
   const clearContext = () => {
-    isOpen(false);
+    setIsOpen(false);
     localStorage.removeItem(isOpen);
   };
 
@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="navbar sticky z-20 top-0 ">
+      <header className="navbar sticky top-0 z-50">
         <img
           src={burgerHover ? "./burger-fuchsia.svg" : "./burger.svg"}
           width={40}
@@ -36,7 +36,7 @@ export default function Header() {
           onClick={handleClick}
           onMouseEnter={handleHoverBurger}
           onMouseLeave={handleHoverBurger}
-          className={`${isOpen ?  "z-12 absolute bg-black rounded" : ""}`}></img>
+          className={`${isOpen ?  "z-12 rounded" : ""}`}></img>
         <div className={`${isOpen ? "z-10" : "hidden"}`}>
           <div className="flex flex-col m-2 border p-8 rounded border-white bg-white text-black">
           <Link
