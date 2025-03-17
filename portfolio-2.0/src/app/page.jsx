@@ -68,8 +68,8 @@ export default function Home() {
               <SvgBlobAnim2
                 width="100%"
                 height="100%"
-                className={`z-2 transition-opacity duration-1000 ease-in ${
-                  pageLoad ? "opacity-100" : "opacity-0"
+                className={`z-2  ${
+                  pageLoad ? "transition-opacity duration-1000 ease-in opacity-100" : "opacity-0"
                 }`}
               />
               {openHobbie || openAbout ? (<></>) : (
@@ -88,23 +88,19 @@ export default function Home() {
               />
             </div>
           </div>
-          {!pageLoad ? (
-            <div>
-              <div className="rounded-full w-[300px] h-[300px] bg-amber-500 animate-pulse"></div>
-            </div>
-          ) : (
+        
             <div className="mt-5">
               <Image
                 src="/me.jpeg"
                 width="300"
                 height="300"
                 alt="Picture of me"
-                className={`rounded-full border-b-purple-600 border-t-purple-600 border-8 transition-opacity duration-1000 ease-in ${
-                  pageLoad ? "opacity-100" : "opacity-0"
+                className={`rounded-full border-b-purple-600 border-t-purple-600 border-8  ${
+                  pageLoad ? "transition-opacity duration-1000 ease-in opacity-100" : "opacity-0"
                 }`}
               />
             </div>
-          )}
+     
           <div className="sm:inline-flex relative items-center">
           {openHobbie ? (<></>) : (
             <div
@@ -113,8 +109,8 @@ export default function Home() {
               <SvgBlobAnim
                 width="100%"
                 height="100%"
-                className={`z-2 transition-opacity duration-1000 ease-in ${
-                  pageLoad ? "opacity-100" : "opacity-0"
+                className={`z-2${
+                  pageLoad ? "transition-opacity duration-1000 ease-in opacity-100" : "opacity-0"
                 }`}
               />
               {openHobbie || openAbout ? (<></>) : (
@@ -150,7 +146,7 @@ export default function Home() {
           WELCOME TO MY PORTFOLIO
         </h1>
         <Image
-          src="/arrow.svg"
+          src="/arrowWhite.svg"
           alt="Arrow"
           width={24}
           height={24}

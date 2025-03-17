@@ -1555,12 +1555,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-p, h2 {
+p{
   font-family: 'Plus Jakarta Sans';
   font-weight: 400;
 }
 
-h1 {
+.backdrop-blur-fix {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+h1, h2 {
   font-family: "Archivo", sans-serif;
   font-weight: 400;
   font-style: normal;

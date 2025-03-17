@@ -6,5 +6,8 @@ export default {
         whiteGlow: '0 0 15px rgba(255, 255, 255, 0.8)', // Custom shadow
       },},
     },
-    plugins: {"@tailwindcss/postcss": {}}
+    plugins: {"@tailwindcss/postcss": {}},
+    corePlugins: {
+      backdropFilter: true,
+    },
   };

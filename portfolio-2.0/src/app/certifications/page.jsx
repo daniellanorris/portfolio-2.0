@@ -30,8 +30,8 @@ export default function Certifications() {
       <Image
         width={80}
         height={80}
-        src="/AWS_Cert.png"
-        alt="Datadog Certification"
+        src="/udemy.png"
+        alt="Udemy QA Certification"
       />,
       <div>
         <a
