@@ -16,14 +16,6 @@ export default function Header() {
     burgerHover ? setBurgerHover(false) : setBurgerHover(true);
   };
 
-  const clearContext = () => {
-    setIsOpen(false);
-    localStorage.removeItem(isOpen);
-  };
-
-  useEffect(() => {
-    window.addEventListener("beforeunload", clearContext);
-  }, []);
 
   return (
     <>
@@ -41,22 +33,27 @@ export default function Header() {
           <div className="flex flex-col m-2 border p-8 rounded border-white bg-white text-black">
           <Link
             href="/"
-            className="btn normal-case text-xl hover:text-fuchsia-300">
+            className="btn normal-case text-xl hover:text-fuchsia-300"
+            onClick={handleClick}>
+              
             Home
           </Link>
           <Link
             href="/portfolio"
-            className="btn btn-ghost normal-case text-xl  hover:text-fuchsia-300">
+            className="btn btn-ghost normal-case text-xl  hover:text-fuchsia-300"
+            onClick={handleClick}>
             Portfolio
           </Link>
           <Link
             href="/certifications"
+            onClick={handleClick}
             className="btn normal-case text-xl  hover:text-fuchsia-300">
             Certifications
           </Link>
           <Link
             href="/listening"
-            className="btn normal-case text-xl  hover:text-fuchsia-300">
+            className="btn normal-case text-xl  hover:text-fuchsia-300"
+            onClick={handleClick}>
             Listening
           </Link>
           </div>

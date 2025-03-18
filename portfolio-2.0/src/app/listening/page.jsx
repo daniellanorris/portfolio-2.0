@@ -18,13 +18,13 @@ export default function Listening() {
         Scroll within the below elements to discover what I'm listening to! Data is imported using Spotify's API and a general authorization token. Always team Spotify over Apple music... {" "}
       </p>
       <div className="flex">
-        <h2 className="justify-left px-2">Artists</h2>
+        <h2 className="justify-left px-2">ARTISTS</h2>
         <Image src="/recordPlayer.svg" width="30" height="30" />
       </div>
       <hr className="w-[40%] mt-5"></hr>
       <Artists> </Artists>
       <div className="flex">
-        <p className="justify-self-start px-2">Playlists</p>
+        <p className="justify-self-start px-2">PLAYLISTS</p>
         <Image src="/recordPlayer.svg" width="30" height="30" />
       </div>
       <hr className="w-[40%] mt-5"></hr>

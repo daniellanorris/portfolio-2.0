@@ -2,7 +2,7 @@ import spotifyAuth from "../../../../controllers/spotifyAuth";
 
 export default async function SpotifyArtists() {
   const accessToken = await spotifyAuth();
-  const artistIds = ["4E2rKHVDssGJm2SCDOMMJB", "2pAWfrd7WFF3XhVt9GooDL", "5VTWoYYizcOY3uIKnxeCGI"];
+  const artistIds = ["4E2rKHVDssGJm2SCDOMMJB", "2pAWfrd7WFF3XhVt9GooDL", "5VTWoYYizcOY3uIKnxeCGI", "3NqV2DJoAWsjl787bWaHW7"];
 
   if (!accessToken) {
     console.error("Failed to get Spotify access token.");

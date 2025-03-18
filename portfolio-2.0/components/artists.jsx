@@ -23,6 +23,8 @@ export default function Artists() {
     fetchArtists();
   }, []);
 
+
+
   return (
     <>
     {!loaded ? ( 
@@ -53,7 +55,15 @@ export default function Artists() {
                   />
                 </div>
                 <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-scroll items-center">
-                  <h1 className="p-10">{item.name}</h1>
+                  <h1 className="p-10">{item.name.toUpperCase()}</h1>
+                  <p> Followers:  {item.followers.total.toLocaleString()}</p>
+                  {item.genres.length > 0 && (
+                  <div>
+                    <h2> Genres: </h2>
+                  <p> {item.genres.join(", ")}</p>
+                  </div>
+                  )}
+                  <button className="border border-fuchsia-600 p-2 m-10 rounded-3xl" > <a href={item.external_urls?.spotify}> Open in Spotify </a> </button>
                 </div>
               </div>
             </div>
