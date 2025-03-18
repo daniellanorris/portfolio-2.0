@@ -28,7 +28,7 @@ export default function Listening() {
         <Image src="/recordPlayer.svg" width="30" height="30" />
       </div>
       <hr className="w-[40%] mt-5"></hr>
-      <Playlist></Playlist>
+      {/* <Playlist></Playlist> */}
       </div>
             </div>
            
