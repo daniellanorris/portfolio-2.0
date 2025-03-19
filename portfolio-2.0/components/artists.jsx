@@ -48,7 +48,7 @@ export default function Artists() {
               <div className="relative h-[50%] w-[50%] sm:h-full sm:w-full  rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
                   <Image
-                    src={item.images[0].url}
+                    src={item.images?.[0]?.url}
                     fill
                     className="object-cover rounded-xl"
                     alt="Artist Art"
