@@ -1,5 +1,6 @@
+"use client";
+
 import { useState, useEffect } from "react";
-import { fetchArtists  } from "../src/app/api/artist/page.jsx";
 import Image from "next/image";
 
 export default function Artists() {
@@ -7,18 +8,20 @@ export default function Artists() {
   const [loaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const getArtists = async () => {
+    const fetchArtists = async () => {
       try {
-        const response = await fetchArtists();
-        console.log("artist data", response);
-        setData(response);
+        // Fetching data from the new API route
+        const response = await fetch('/api/artist');
+        const result = await response.json();
+        console.log("artist data", result);
+        setData(result);
         setIsLoaded(true);
       } catch (error) {
         console.error("Error fetching artists:", error);
       }
     };
 
-    getArtists();
+    fetchArtists();
   }, []);
 
   return (
@@ -37,9 +40,9 @@ export default function Artists() {
           {data.map((item) => (
             <div
               key={item.id}
-              className="group h-96 w-96 flex-shrink-0 snap-center justify-center items-center m-10  drop-shadow-whiteGlow"
+              className="group h-96 w-96 flex-shrink-0 snap-center justify-center items-center m-10 drop-shadow-whiteGlow"
             >
-              <div className="relative h-[50%] w-[50%] sm:h-full sm:w-full  rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              <div className="relative h-[50%] w-[50%] sm:h-full sm:w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
                   <Image
                     src={item.images?.[0]?.url}

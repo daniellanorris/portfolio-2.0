@@ -1,6 +1,7 @@
+
 import spotifyAuth from "../../../../controllers/spotifyAuth";
 
-export async function fetchArtists() {
+export default async function handler(req, res) {
   const accessToken = await spotifyAuth();
   const artistIds = [
     "4E2rKHVDssGJm2SCDOMMJB",
@@ -10,8 +11,7 @@ export async function fetchArtists() {
   ];
 
   if (!accessToken) {
-    console.error("Failed to get Spotify access token.");
-    return [];
+    return res.status(500).json({ error: "Failed to get Spotify access token." });
   }
 
   try {
@@ -31,10 +31,8 @@ export async function fetchArtists() {
       return res.json();
     }));
 
-    console.log("Fetched artists:", data);
-    return data;
+    return res.status(200).json(data);
   } catch (error) {
-    console.error("Error fetching artists:", error);
-    return [];
+    return res.status(500).json({ error: "Error fetching artists data", details: error.message });
   }
 }
