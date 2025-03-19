@@ -11,10 +11,10 @@ export default function Artists() {
     const fetchArtists = async () => {
       try {
         // Fetching data from the new API route
-        const response = await fetch('/api/artist');
+        const [response] = await fetch('/api/artist');
         const result = await response.json();
-        console.log("artist data", result);
-        setData(result);
+        console.log("artist data", [result]);
+        setData([result]);
         setIsLoaded(true);
       } catch (error) {
         console.error("Error fetching artists:", error);

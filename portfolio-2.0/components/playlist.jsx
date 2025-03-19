@@ -11,9 +11,9 @@ export default function Playlist() {
   useEffect(() => {
     const fetchPlaylist = async () => {
       try {
-        const response = await fetch('/api/playlist');
-        console.log("playlist data", response);
-        setData(response);
+        const [response] = await fetch('/api/playlist');
+        console.log("playlist data", [response]);
+        setData([response]);
         isLoaded(true);
       } catch (error) {
         console.error("Error fetching playlist:", error);
