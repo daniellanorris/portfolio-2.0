@@ -1,6 +1,6 @@
 import spotifyAuth from "../../../../controllers/spotifyAuth";
 
-export default async function SpotifyArtists() {
+export async function fetchArtists() {
   const accessToken = await spotifyAuth();
   const artistIds = [
     "4E2rKHVDssGJm2SCDOMMJB",

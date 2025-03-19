@@ -1,44 +1,38 @@
-"use client";
-
 import { useState, useEffect } from "react";
-import SpotifyArtists from "../src/app/api/artist/page.jsx";
+import { fetchArtists  } from "../src/app/api/artist/page.jsx";
 import Image from "next/image";
 
 export default function Artists() {
   const [data, setData] = useState([]);
-  const [loaded, setIsLoaded] = useState(false)
+  const [loaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const fetchArtists = async () => {
+    const getArtists = async () => {
       try {
-        const response = await SpotifyArtists();
+        const response = await fetchArtists();
         console.log("artist data", response);
         setData(response);
-        setIsLoaded(true)
+        setIsLoaded(true);
       } catch (error) {
         console.error("Error fetching artists:", error);
       }
     };
 
-    fetchArtists();
+    getArtists();
   }, []);
-
-
 
   return (
     <>
-    {!loaded ? ( 
-  <div className="flex animate-pulse items-center h-[35vh] justify-center m-10">
-    <div className="grid grid-cols-4 space-x-10">
-    <div className="gap-10 col-span-1 size-10 rounded-full bg-gray-200"></div>
-    <div className="gap-x-10 col-span-1 size-10 rounded-full bg-gray-200"></div>
-    <div className="gap-x-10 col-span-1 size-10 rounded-full bg-gray-200"></div>
-    <div className="gap-x-10 col-span-1 size-10 rounded-full bg-gray-200"></div>
-
-
-  </div>
-</div>) : (
-
+      {!loaded ? (
+        <div className="flex animate-pulse items-center h-[35vh] justify-center m-10">
+          <div className="grid grid-cols-4 space-x-10">
+            <div className="gap-10 col-span-1 size-10 rounded-full bg-gray-200"></div>
+            <div className="gap-x-10 col-span-1 size-10 rounded-full bg-gray-200"></div>
+            <div className="gap-x-10 col-span-1 size-10 rounded-full bg-gray-200"></div>
+            <div className="gap-x-10 col-span-1 size-10 rounded-full bg-gray-200"></div>
+          </div>
+        </div>
+      ) : (
         <div className="w-[75vw] overflow-x-scroll flex snap-mandatory max-w-6xl">
           {data.map((item) => (
             <div
@@ -56,20 +50,22 @@ export default function Artists() {
                 </div>
                 <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-scroll items-center">
                   <h1 className="p-10">{item.name.toUpperCase()}</h1>
-                  <p> Followers:  {item.followers.total.toLocaleString()}</p>
+                  <p> Followers: {item.followers.total.toLocaleString()}</p>
                   {item.genres.length > 0 && (
-                  <div>
-                    <h2> Genres: </h2>
-                  <p> {item.genres.join(", ")}</p>
-                  </div>
+                    <div>
+                      <h2> Genres: </h2>
+                      <p> {item.genres.join(", ")}</p>
+                    </div>
                   )}
-                  <button className="border border-fuchsia-600 p-2 m-10 rounded-3xl" > <a href={item.external_urls?.spotify}> Open in Spotify </a> </button>
+                  <button className="border border-fuchsia-600 p-2 m-10 rounded-3xl">
+                    <a href={item.external_urls?.spotify}> Open in Spotify </a>
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        )}
+      )}
     </>
   );
 }
