@@ -1,4 +1,4 @@
-import spotifyAuth from "../../../../controllers/spotifyAuth";
+import spotifyAuth from "../../spotifyAuth";
 
 export default async function SpotifyPlaylist() {
   const accessToken = await spotifyAuth();
