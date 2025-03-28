@@ -29,7 +29,6 @@ export default async function SpotifyPlaylist() {
 
     // Parse JSON responses
     const data = await Promise.all(responses.map((res) => res.json()));
-    console.log("Fetched playlists:", data);
 
     // Combine data if needed
     const dataConcat = data.flat();

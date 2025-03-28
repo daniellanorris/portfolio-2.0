@@ -34,7 +34,7 @@ export default async function SpotifyArtists() {
 
     // Parse JSON responses
     const data = await Promise.all(responses.map((res) => res.json()));
-    console.log("Fetched artists:", data);
+
 
     // Combine data if needed
     const dataConcat = JSON.stringify(data);
