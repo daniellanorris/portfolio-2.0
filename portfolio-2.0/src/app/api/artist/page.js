@@ -37,9 +37,9 @@ export default async function SpotifyArtists() {
     console.log("Fetched artists:", data);
 
     // Combine data if needed
-    const dataConcat = data.flat();
+    const dataConcat = JSON.stringify(data);
 
-    return data;
+    return dataConcat;
   } catch (error) {
     console.error("Error fetching artists:", error);
     return null;
