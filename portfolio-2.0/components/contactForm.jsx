@@ -15,9 +15,9 @@ export default function ContactForm() {
 
     const dataForm = new FormData(form);
 
-    dataForm.append("service_id", process.env.NEXT_PUBLIC_SERVICE_ID);
-    dataForm.append("template_id", process.env.NEXT_PUBLIC_TEMPLATE_ID);
-    dataForm.append("user_id", process.env.NEXT_PUBLIC_PUBLIC_KEY);
+    dataForm.append("service_id", process.env.NEXT_SERVICE_ID);
+    dataForm.append("template_id", process.env.NEXT_TEMPLATE_ID);
+    dataForm.append("user_id", process.env.NEXT_KEY);
 
     console.log("form data", dataForm);
 

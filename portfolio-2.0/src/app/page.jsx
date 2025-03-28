@@ -57,76 +57,99 @@ export default function Home() {
   return (
     <div className={`${styles.page}`}>
       {/* Full-width Hero Section */}
-      <div className="w-[100vw] top-0 sticky h-screen flex flex-col items-center justify-center bg-gradient-to-b from-green-200 to-blue-200">
+      <div className="w-[100vw] top-0 sticky h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-600 to-blue-200">
         <div className="flex flex-col items-center text-center w-[75vw]">
           {/* Top Blob */}
-          <div className="sm:inline-flex items-center">
-            {openAbout ? (<></>) : (
-            <div
-              className={`${openHobbie ? "w-[75px] h-[75px]" : "w-[300px] h-[200px] overflow-hidden"}  flex justify-center items-center hover:cursor-pointer`}
-              onClick={openHobbieCard}>
-              <SvgBlobAnim2
-                width="100%"
-                height="100%"
-                className={`z-2  ${
-                  pageLoad ? "transition-opacity duration-1000 ease-in opacity-100" : "opacity-0"
-                }`}
-              />
-              {openHobbie || openAbout ? (<></>) : (
-              <div className="absolute mt-5 text-md font-semibold pb-5 pr-3">
-                <p>HOBBIES</p>
-              </div>
-            )}
-            </div>
-            )}
-            <div className="sm:float-right">
-              <CardHobbie
-                className="z-22"
-                setIsOpenHobbie={setIsOpenHobbie}
-                open={openHobbie}
-                text={text[0]}
-              />
-            </div>
+          <h1> DANIELLA NORRIS </h1>
+          <div className="mt-5">
+            <Image
+              src="/me.jpeg"
+              width="300"
+              height="300"
+              alt="Picture of me"
+              className={`rounded-full border-b-purple-600 border-t-purple-600 border-8  ${
+                pageLoad
+                  ? "transition-opacity duration-1000 ease-in opacity-100"
+                  : "opacity-0"
+              }`}
+            />
           </div>
-        
-            <div className="mt-5">
-              <Image
-                src="/me.jpeg"
-                width="300"
-                height="300"
-                alt="Picture of me"
-                className={`rounded-full border-b-purple-600 border-t-purple-600 border-8  ${
-                  pageLoad ? "transition-opacity duration-1000 ease-in opacity-100" : "opacity-0"
-                }`}
-              />
-            </div>
-     
-          <div className="sm:inline-flex relative items-center">
-          {openHobbie ? (<></>) : (
-            <div
-              className={`${openAbout ? "w-[75px] h-[75px]" : "w-[300px] h-[200px] overflow-hidden"}  flex justify-center items-center hover:cursor-pointer`}
-              onClick={openAboutCard}>
-              <SvgBlobAnim
-                width="100%"
-                height="100%"
-                className={`z-2${
-                  pageLoad ? "transition-opacity duration-1000 ease-in opacity-100" : "opacity-0"
-                }`}
-              />
-              {openHobbie || openAbout ? (<></>) : (
-              <div className="absolute mt-5 text-md font-semibold pb-5 pr-3">
-                <p>ABOUT</p>
+          <div className="grid-cols-2 grid mt-5 items-center">
+            <div className="sm:inline-flex relative items-center">
+              {openHobbie ? (
+                <></>
+              ) : (
+                <div
+                  className={`${
+                    openAbout
+                      ? "w-[75px] h-[75px]"
+                      : "w-[300px] h-[200px] overflow-hidden"
+                  }  flex justify-center items-center hover:cursor-pointer`}
+                  onClick={openAboutCard}>
+                  <SvgBlobAnim
+                    width="100%"
+                    height="100%"
+                    className={`z-2${
+                      pageLoad
+                        ? "transition-opacity duration-1000 ease-in opacity-100"
+                        : "opacity-0"
+                    }`}
+                  />
+                  {openHobbie || openAbout ? (
+                    <></>
+                  ) : (
+                    <div className="absolute mt-5 text-md font-semibold pb-5 pr-3">
+                      <p>ABOUT</p>
+                    </div>
+                  )}
+                </div>
+              )}
+              <div className="absolute">
+                <CardAbout
+                  className="z-22"
+                  text={text[1]}
+                  setIsOpenAbout={setIsOpenAbout}
+                  open={openAbout}
+                />
               </div>
-            )}
             </div>
-            )}
-            <div className="sm:float-right">
-              <CardAbout
-                className="z-22"
-                text={text[1]}
-                setIsOpenAbout={setIsOpenAbout}
-                open={openAbout}
-              />
+            <div className="sm:inline-flex items-center">
+              {openAbout ? (
+                <></>
+              ) : (
+                <div
+                  className={`${
+                    openHobbie
+                      ? "w-[75px] h-[75px]"
+                      : "w-[300px] h-[200px] overflow-hidden"
+                  }  flex justify-center items-center hover:cursor-pointer`}
+                  onClick={openHobbieCard}>
+                  <SvgBlobAnim2
+                    width="100%"
+                    height="100%"
+                    className={`z-2  ${
+                      pageLoad
+                        ? "transition-opacity duration-1000 ease-in opacity-100"
+                        : "opacity-0"
+                    }`}
+                  />
+                  {openHobbie || openAbout ? (
+                    <></>
+                  ) : (
+                    <div className="absolute mt-5 text-md font-semibold pb-5 pr-3">
+                      <p>HOBBIES</p>
+                    </div>
+                  )}
+                </div>
+              )}
+              <div className="sm:float-right">
+                <CardHobbie
+                  className="z-22"
+                  setIsOpenHobbie={setIsOpenHobbie}
+                  open={openHobbie}
+                  text={text[0]}
+                />
+              </div>
             </div>
           </div>
         </div>
