@@ -1,6 +1,6 @@
 import Header from "../../components/header";
 import Footer from "../../components/footer.jsx";
-import "../app/globals.css";
+import "./globals.css";
 
 export const metadata = {
   title: "Portfolio - Norris",
