@@ -37,7 +37,7 @@ export default async function SpotifyArtists() {
 
 
     // Combine data if needed
-    const dataConcat = JSON.stringify(data);
+    const dataConcat = data.flat();
 
     return dataConcat;
   } catch (error) {
