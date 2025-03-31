@@ -1,5 +1,4 @@
 import React from "react";
-import "../src/app/globals.css";
 
 export default function Card({ items }) {
     return (
