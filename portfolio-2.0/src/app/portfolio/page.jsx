@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../page.module.css";
-import PortfolioCard from "../../../components/portfolioCard";
+import PortfolioCard from "../../../components/server/portfolioCard";
 
 export default function Portfolio() {
   const data = [

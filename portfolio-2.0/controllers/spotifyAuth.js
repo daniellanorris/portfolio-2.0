@@ -1,6 +1,9 @@
+import { connection } from "next/server";
+
 export default async function spotifyAuth() {
-    const clientId = process.env.NEXT_SPOTIFY_CLIENT_ID;
-    const clientSecret = process.env.NEXT_SPOTIFY_CLIENT_SECRET;
+  await connection(); // Ensure the connection is established
+    const clientId = process.env.SPOTIFY_CLIENT_ID;
+    const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
   
     try {
       const response = await fetch('https://accounts.spotify.com/api/token', {
@@ -16,7 +19,6 @@ export default async function spotifyAuth() {
       }
   
       const data = await response.json();
-      console.log('Access Token:', data.access_token);
       return data.access_token;
   
     } catch (error) {

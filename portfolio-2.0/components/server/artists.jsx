@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import SpotifyArtists from "../controllers/api/artist/page.js";
+import SpotifyArtists from "../../controllers/api/artist/page.js";
 import Image from "next/image";
 
 export default function Artists() {

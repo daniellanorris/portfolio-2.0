@@ -1,7 +1,6 @@
-"use client";
+
 
 import ArtistServerRender from "../../../components/server/artistServerRender.jsx";
-import ArtistsClientRender from "../../../components/client/artistRender.jsx";
 import Image from "next/image.js";
 
 export default function Listening() {
@@ -20,10 +19,7 @@ export default function Listening() {
             <h2 className="justify-left px-2">ARTISTS</h2>
             <Image src="/recordPlayer.svg" width="30" height="30" />
           </div>
-          <hr className="w-[40%] mt-5"></hr>
-          <ArtistsClientRender>
-            <ArtistServerRender />
-          </ArtistsClientRender>
+          <ArtistServerRender/>
           <div className="flex">
             <p className="justify-self-start px-2">PLAYLISTS</p>
             <Image src="/recordPlayer.svg" width="30" height="30" />

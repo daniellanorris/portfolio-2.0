@@ -3,11 +3,11 @@
 import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
-import SvgBlobAnim from "../../components/svgBlobAnim";
-import SvgBlobAnim2 from "../../components/svgBlobAnimNumber2";
+import SvgBlobAnim from "../../components/server/svgBlobAnim";
+import SvgBlobAnim2 from "../../components/server/svgBlobAnimNumber2";
 
-import CardAbout from "../../components/cardAbout";
-import CardHobbie from "../../components/cardHobbie";
+import CardAbout from "../../components/server/cardAbout";
+import CardHobbie from "../../components/server/cardHobbie";
 
 export default function Home() {
   const [pageLoad, setPageLoad] = useState(false);
