@@ -57,25 +57,26 @@ export default function Home() {
   return (
     <div className={`${styles.page}`}>
       {/* Full-width Hero Section */}
-      <div className="w-[100vw] top-0 sticky h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-600 to-blue-200">
-        <div className="flex flex-col items-center text-center w-[75vw]">
-          {/* Top Blob */}
-          <h1> DANIELLA NORRIS </h1>
-          <div className="mt-5">
+      <div className="w-[100vw] top-0 sticky flex flex-col justify-items-center  justify-center bg-gradient-to-b from-black to-indigo-800">
+        <div className="w-full h-screen flex flex-col justify-center items-center text-center">
+     
+          {/* <h1 className="hidden"> DANIELLA NORRIS </h1> */}
+          <div className="mt-5 justify-center">
             <Image
               src="/me.jpeg"
               width="300"
               height="300"
               alt="Picture of me"
-              className={`rounded-full border-b-purple-600 border-t-purple-600 border-8  ${
+              className={`rounded-full border-b-purple-600 border-t-purple-600 border-8 w-[50vw] md:w-[25vw]  ${
                 pageLoad
+
                   ? "transition-opacity duration-1000 ease-in opacity-100"
-                  : "opacity-0"
+                  : "hidden"
               }`}
             />
           </div>
-          <div className="grid-cols-2 grid mt-5 items-center">
-            <div className="sm:inline-flex relative items-center">
+          <div className="sm:grid-cols-2 grid-cols-1 grid mt-5 sm:justify-center justify-left items-center max-w-[100%]">
+            <div className="relative items-center">
               {openHobbie ? (
                 <></>
               ) : (
@@ -83,7 +84,7 @@ export default function Home() {
                   className={`${
                     openAbout
                       ? "w-[75px] h-[75px]"
-                      : "w-[300px] h-[200px] overflow-hidden"
+                      : "sm:w-[300px] sm-h[200px] w-[200px] h-[175px] overflow-hidden"
                   }  flex justify-center items-center hover:cursor-pointer`}
                   onClick={openAboutCard}>
                   <SvgBlobAnim
@@ -99,17 +100,17 @@ export default function Home() {
                     <></>
                   ) : (
                     <div className="absolute mt-5 text-md font-semibold pb-5 pr-3">
-                      <p>ABOUT</p>
+                      <p><b>ABOUT</b></p>
                     </div>
                   )}
                 </div>
               )}
-              <div className="absolute">
+              <div className="sm:float-right">
                 <CardAbout
-                  className="z-22"
-                  text={text[1]}
+                  className="z-22 text-left"
                   setIsOpenAbout={setIsOpenAbout}
                   open={openAbout}
+                  text={text[1]}
                 />
               </div>
             </div>
@@ -121,7 +122,7 @@ export default function Home() {
                   className={`${
                     openHobbie
                       ? "w-[75px] h-[75px]"
-                      : "w-[300px] h-[200px] overflow-hidden"
+                      : "sm:w-[300px] sm:h-[200px] w-[200px] h-[150px] overflow-hidden"
                   }  flex justify-center items-center hover:cursor-pointer`}
                   onClick={openHobbieCard}>
                   <SvgBlobAnim2
@@ -129,7 +130,7 @@ export default function Home() {
                     height="100%"
                     className={`z-2  ${
                       pageLoad
-                        ? "transition-opacity duration-1000 ease-in opacity-100"
+                        ? "transition-opacity duration-1000 ease-in opacity-100 align-center"
                         : "opacity-0"
                     }`}
                   />
@@ -137,7 +138,7 @@ export default function Home() {
                     <></>
                   ) : (
                     <div className="absolute mt-5 text-md font-semibold pb-5 pr-3">
-                      <p>HOBBIES</p>
+                      <p><b>HOBBIES</b></p>
                     </div>
                   )}
                 </div>
@@ -152,21 +153,22 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-
-        <Image
-          src="/arrow.svg"
+          <Image
+          src="/arrowWhite.svg"
           alt="Arrow"
           width={24}
           height={24}
-          className="z-20 animate-bounce mt-5"
+          className="z-20 animate-bounce mt-5 sm:mt-20"
         />
+        </div>
+
+        
       </div>
 
       {/* Welcome Section */}
       <div className="sticky w-[100vw] top-0 h-screen flex flex-col items-center text-center justify-center bg-gradient-to-b from-indigo-800 to-purple-800 text-white">
-        <h1 className="transition-opacity duration-1000 ease-in opacity-100 pb-10 inline-flex">
-          WELCOME TO MY PORTFOLIO
+        <h1 className="transition-opacity duration-1000 ease-in opacity-100 p-10 inline-flex">
+          Welcome to my portfolio
         </h1>
         <Image
           src="/arrowWhite.svg"
@@ -178,7 +180,7 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <main className="w-[100vw] grid grid-cols-12 p-10 gap-4 sticky top-0 flex-col items-center h-screen justify-center bg-gradient-to-b from-purple-800 to-pink-800 text-white">
+      <main className="w-[100vw] grid grid-cols-12 p-10 sticky top-0 flex-col items-center h-screen justify-center bg-gradient-to-b from-purple-800 to-pink-800 text-white">
         <div className="grid col-span-12 md:col-span-6 p-6 bg-white text-black hover:bg-fuchsia-500 scale-100 hover:scale-[1.1] hover:z-20 transition-transform duration-300">
           <h2 className="col-span-2 md:col-span-1">
             Capstone Project - Tatt2 Web Application

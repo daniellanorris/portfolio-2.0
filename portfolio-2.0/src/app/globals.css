@@ -1565,13 +1565,20 @@ p{
   -webkit-backdrop-filter: blur(8px);
 }
 
-h1, h2 {
+
+h2 {
   font-family: "Archivo", sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 500;
 
 }
 
+h1 {
+  font-family: "Archivo", sans-serif;
+  font-style: normal;
+  font-weight: 700; 
+
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

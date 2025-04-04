@@ -7,25 +7,25 @@ export default function Portfolio() {
     {
       title: "Tatt2 Web Application",
       body: "A web application for tattoo artists and tattoo seekers.",
-      image: "/udemy.png",
+      image: "/tatt2Landing.png",
     },
     {
       title: "Toot Brewery Management Web Application",
       body: "A web application for taproom managers and brewers.",
-      image: "/udemy.png",
+      image: "/tootBeerPage.png",
     },
     {
       title: "Portiko Technologies Design Brief",
       body: "A portfolio showcasing logo, text, and color design for a faux company.",
-      image: "/portiko/portiko_logo.png",
+      image: "/portikoLogoGuide.png",
       techStack: "Adobe Indesign, Abobe Illustrator",
-      headerImage: "/portiko/Portiko_Tab.png",
-      exampleImage: "/portiko/Portiko_Brief.png",
+      headerImage: "/portikoLogoGuide.png",
+      exampleImage: "/portikoLogoGuide.png",
     },
     {
       title: "Event Marketing",
       body: "A mockup event brief complete with website design, marketing materials, and insights into audience + reach.",
-      image: "/udemy.png",
+      image: "/bigNeighborhoodLP.png",
     },
   ];
 
