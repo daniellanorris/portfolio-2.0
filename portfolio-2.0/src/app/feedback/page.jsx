@@ -1,4 +1,5 @@
-import ContactForm from "../../../components/client/contactForm";
+
+import MessageServerRender from "../../../components/server/messageHandler";
 
 export default function FeedbackPage() {
   return (
@@ -11,7 +12,7 @@ export default function FeedbackPage() {
         <p> You can also reach out to me directly at daniellamnorris@gmail.com if preferred.</p>
         </div>
         <div className="w-[100vw]">
-        <ContactForm/>
+        <MessageServerRender/>
         </div>
     </div>
   );
