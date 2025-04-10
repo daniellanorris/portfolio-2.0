@@ -43,19 +43,19 @@ form.reset(); // Reset the form after submission
   };
 
   return (
-    <div className="justify-left gap-4">
+    <div className="flex justify-center min-h-screen">
       <form
         id="contact-form"
         ref={formRef}
         onSubmit={handleSubmit}
-        encType="multipart/form-data"  // Ensure proper encoding for file uploads
-        className="flex flex-col gap-4 w-full h-full p-4"
+        encType="multipart/form-data"
+        className="flex flex-col items-center gap-6 w-full h-[100%] max-w-md p-6 rounded-2xl shadow-lg"
       >
-        <div className="w-[80%]">
-          <label htmlFor="name" className="pr-3">Name:</label>
+        <div className="w-full flex flex-col items-start">
+          <label htmlFor="name" className="mb-2">Name</label>
           <input
             type="text"
-            className="border-white border rounded-2xl p-2 w-[80%]"
+            className="border p-3 rounded-xl w-full  invalid:border-pink-500  valid:border-green-300"
             name="name"
             required
             placeholder="Your name"
@@ -66,39 +66,38 @@ form.reset(); // Reset the form after submission
             title="Please enter a valid name (8-30 letters)"
           />
         </div>
-
-        <div className="relative w-[80%]">
-          <label htmlFor="email" className="pr-3">Email:</label>
+  
+        <div className="w-full flex flex-col items-start">
+          <label htmlFor="email" className="mb-2">Email</label>
           <input
             type="email"
-            className="border-white p-4 border rounded-2xl w-[80%]"
+            className="border p-3 rounded-xl w-full  invalid:border-pink-500 valid:border-green-300"
             name="email"
             autoComplete="email"
             placeholder="Your email"
             required
           />
         </div>
-
-        <div className="w-[95%] flex flex-col justify-center items-center">
-          <label htmlFor="message" className="pr-3">Message:</label>
+  
+        <div className="w-full flex flex-col items-start">
+          <label htmlFor="message" className="mb-2">Message</label>
           <textarea
             name="message"
-            className="border-white border p-4 rounded-2xl w-[80%] h-[300px]"
+            className="border p-3 rounded-xl w-full h-40 invalid:border-pink-500  valid:border-green-300 "
             placeholder="What would you like to say to me?"
             required
           ></textarea>
         </div>
-
+  
         <div>
           <input
             type="submit"
-            className="rounded-2xl p-2 border border-fuchsia-600 hover:bg-fuchsia-600 hover:cursor-pointer"
+            className="rounded-2xl p-3 border border-fuchsia-600 hover:bg-fuchsia-600 hover:text-white hover:cursor-pointer w-full"
             value="Submit"
           />
         </div>
+        {status && <p className="mt-4 text-center">{status}</p>}
       </form>
-
-      {status && <p className="mt-4">{status}</p>}
     </div>
   );
 }

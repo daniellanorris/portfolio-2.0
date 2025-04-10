@@ -15,7 +15,7 @@ export default function Certifications() {
         src="/AWS_Cert.png"
         alt="AWS Certification"
       />,
-      <div>
+      <div className="hover:cursor-pointer" >
         <a
           href="https://www.credly.com/badges/bea4df0d-a3a5-4699-be80-f1a281aafec6/linked_in?t=spmrmr"
           target="_blank"
@@ -38,12 +38,12 @@ export default function Certifications() {
           href="https://www.udemy.com/certificate/UC-b71e3c0d-6242-4521-98bb-24fb22a5b398"
           target="_blank"
           rel="noopener noreferrer">
-          <Button text={buttonText} className="bg-sky-500 hover:bg-sky-700">
+          <Button text={buttonText} className="bg-sky-500 hover:bg-sky-700 hover:cursor-pointer">
             <em> </em>
           </Button>
         </a>
       </div>,
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid sm:grid-cols-2 gap-4">
         <div id="div1">
           <ul className="col-span-1 list-disc">
             <li>
@@ -70,7 +70,7 @@ export default function Certifications() {
   ];
 
   return (
-    <div className={`${styles.page} p-30 m-auto`}>
+    <div className={`${styles.page} m-auto sm:p-10`}>
       <h1>CERTIFICATIONS </h1>
       <main className={styles.main}>
         <div>

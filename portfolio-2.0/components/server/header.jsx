@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <>
-      <header className={`navbar sticky top-0 z-50  `}>
+      <header className={`navbar sticky top-0 z-50 hover:cursor-pointer  `}>
         <Image
           src={burgerHover ? "./burger-fuchsia.svg" : "./burger.svg"}
           width={40}
@@ -61,7 +61,7 @@ export default function Header() {
             href="/feedback"
             className="btn normal-case text-xl  hover:text-fuchsia-300"
             onClick={handleClick}>
-            Contact Me
+            Contact
           </Link>
           </div>
         </div>

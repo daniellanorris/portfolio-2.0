@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import X from "./x";
+import { Button } from "./button";
 
 export default function PortfolioCard({ data }) {
   const [indexOpen, setIndexOpen] = useState(null);
@@ -30,8 +31,8 @@ export default function PortfolioCard({ data }) {
         <div className="relative">
           {/* Modal Overlay */}
           {indexOpen !== null && (
-            <div className="fixed flex inset-0 bg-fuchsia-800/30 backdrop-blur-lg backdrop-blur-fix justify-center z-50">
-              <div className="mt-4 text-left bg-black border border-black rounded-lg w-[90vw] sm:w-[75vw] h-[75vh] relative">
+            <div className="items-center fixed flex inset-0 bg-fuchsia-800/30 backdrop-blur-lg backdrop-blur-fix justify-center z-50">
+              <div className="mt-4 text-left bg-black border-fuchsia-400 border-r-8 border-b-8 rounded-2xl w-[90vw] sm:w-[75vw] h-[75vh] relative">
                 {/* <Image width='100' height='40' alt='portiko header' className='w-[100%] p-0 m-0'src={data[indexOpen]?.headerImage}/> */}
                 <button
                   onClick={() => setIndexOpen(null)}
@@ -42,8 +43,18 @@ export default function PortfolioCard({ data }) {
                   <h1 className="text-lg font-semibold">
                     {data[indexOpen]?.title}
                   </h1>
-                  <p>{data[indexOpen]?.body}</p>
-                  <div className="flex flex-col sm:flex-row justify-between mt-4">
+                  <h2 className=" text-white">
+                    {data[indexOpen]?.subtitle}
+                  </h2>
+                  <p className="text-left">
+                      {" "}
+                      {data[indexOpen]?.techStack}{" "}
+                    </p>
+                    <br></br>
+                  <p className="mb-10">{data[indexOpen]?.body}</p>
+      
+                  <a href={data[indexOpen]?.src}> <Button text="View Project"></Button></a>
+                  {/* <div className="flex flex-col sm:flex-row justify-between mt-4">
                     {data[indexOpen].image == null ? (
                       <> Loading</>
                     ) : (
@@ -51,15 +62,12 @@ export default function PortfolioCard({ data }) {
                         width="300"
                         height="300"
                         alt="portiko brief example"
-                        className="p-0 m-0 transition-opacity duration-500 ease-in start"
+                        className="p-0 m-0 transition-opacity duration-500 ease-in start rounded-2xl "
                         src={data[indexOpen]?.image}
                       />
                     )}
-                    <p className="sm:float-right">
-                      {" "}
-                      {data[indexOpen]?.techStack}{" "}
-                    </p>
-                  </div>
+                    
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -67,12 +75,15 @@ export default function PortfolioCard({ data }) {
 
           {/* Portfolio Grid with Blur Effect */}
           <div className={`text-left sm:grid sm:grid-cols-2 transition `}>
-            {data.map(({ title, body, image }, i) => (
+            {data.map(({ title, body, image, subtitle }, i) => (
               <div
                 key={i}
                 onClick={() => triggerCardAction(i)}
-                className="p-4 mb-10 hover:bg-fuchsia-600 cursor-pointer">
-                <h1 className="text-xl text-lxeft font-bold">{title}</h1>
+                className="p-4 mb-10 hover:border-fuchsia-400 hover:border-r-8 rounded-2xl hover:border-b-8 cursor-pointer">
+                <h1 className="text-xl text-left font-bold">{title}</h1>
+                <h2 className="text-xl p-0 text-left">
+                    {subtitle}
+                  </h2>
                 <p className="text-left">{body}</p>
                 {image !== null ? (
                   <Image
@@ -80,7 +91,7 @@ export default function PortfolioCard({ data }) {
                     width={300}
                     height={200}
                     alt={title}
-                    className="rounded-lg mt-2"
+                    className="rounded-2xl mt-2"
                   />
                 ) : (
                   <>
