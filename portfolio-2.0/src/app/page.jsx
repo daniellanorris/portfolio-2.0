@@ -90,7 +90,7 @@ export default function Home() {
 
           <div className="flex justify-center w-full">
             <Image
-              src="/arrowWhite.svg"
+              src="/images/arrowWhite.svg"
               alt="Arrow"
               width={24}
               height={24}
@@ -183,7 +183,7 @@ export default function Home() {
 
           <div className="justify-content-center mt-10">
             <Image
-              src="/arrowWhite.svg"
+              src="/images/arrowWhite.svg"
               alt="Arrow"
               width={24}
               height={24}
@@ -229,7 +229,7 @@ export default function Home() {
           </div>
           <div className="justify-content-center mt-10">
           <Image
-              src="/arrowWhite.svg"
+              src="/images/arrowWhite.svg"
               alt="Arrow"
               width={24}
               height={24}

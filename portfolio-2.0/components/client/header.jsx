@@ -1,7 +1,7 @@
 "use client";
 
-import burger from '../../public/burger.svg'
-import purpleBurger from '../../public/burger-fuchsia.svg'
+import burger from '../../public/images/burger.svg'
+import purpleBurger from '../../public/images/burger-fuchsia.svg'
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
