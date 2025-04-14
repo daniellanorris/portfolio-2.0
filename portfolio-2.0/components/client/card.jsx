@@ -2,10 +2,9 @@ import React from "react";
 
 export default function Card({ items }) {
   return (
-    <div>
+    <div className="snap-mandatory snap-y">
       {items.map((info, index) => (
-  
-          <div key={index} className="rounded-2xl pb-10 m-6 flex-wrap">
+          <div key={index} className="rounded-2xl pb-10 m-6 flex-wrap snap-start">
             <div className="pb-10">
             <div className="p-0 w-full fill h-[200px] overflow-hidden rounded-t-4xl"> {info[1]}</div>
             <h2 className="p-4">{info[0]}</h2>

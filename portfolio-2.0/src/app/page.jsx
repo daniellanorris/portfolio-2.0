@@ -135,7 +135,7 @@ export default function Home() {
                 height={100}
               />
 
-              <div className="bg-white rounded-3xl w-[110px] h-[110px] flex gap-4 shadow-2xl shadow-amber-600 box-shadow-lg">
+              <div className="bg-white rounded-3xl w-[110px] h-[110px] flex gap-4 ">
                 <Image
                   src="/techStack/tailwindcss-logotype.svg"
                   alt="Tailwind CSS Logo"
@@ -209,7 +209,7 @@ export default function Home() {
                   height={100}
                 />
 
-                <div className="bg-white rounded-3xl p-1 flex gap-4 shadow-2xl shadow-amber-600">
+                <div className="bg-white rounded-3xl p-1 flex gap-4">
                   <Image
                     src="/techStack/mongo.png"
                     alt="MongoDB Logo"

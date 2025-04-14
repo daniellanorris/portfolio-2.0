@@ -10,8 +10,8 @@ export default function Certifications() {
     [
       "AWS Certified Cloud Practitioner (2025)",
       <Image
-        width={80}
-        height={80}
+        width={200}
+        height={200}
         src="/images/aws-header.jpg"
         alt="AWS Certification"
         className="w-full fill p-0 rounded-t-4xl overflow-hidden"
@@ -30,8 +30,8 @@ export default function Certifications() {
     [
       "Udemy QA Certification (2024)",
       <Image
-        width={80}
-        height={80}
+        width={200}
+        height={200}
         src="/images/testing_qa.jpg"
         alt="Udemy QA Certification"
         className="w-full fill p-0 rounded-t-4xl overflow-hidden"
