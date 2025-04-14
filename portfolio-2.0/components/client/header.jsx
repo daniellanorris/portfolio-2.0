@@ -1,8 +1,5 @@
 "use client";
 
-import burger from '../../public/images/burger.svg'
-import purpleBurger from '../../public/images/burger-fuchsia.svg'
-
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -25,7 +22,7 @@ export default function Header() {
     <>
       <header className={`navbar sticky top-0 z-50 hover:cursor-pointer`}>
         <Image
-          src={burgerHover ? purpleBurger : burger}
+          src={burgerHover ? '/images/burger-fuchsia.svg' : '/images/burger.svg'}
           width={40}
           height={40}
           alt="burger menu"
