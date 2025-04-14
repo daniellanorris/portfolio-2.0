@@ -12,8 +12,10 @@ export default function Certifications() {
       <Image
         width={80}
         height={80}
-        src="/AWS_Cert.png"
+        src="/images/aws-header.jpg"
         alt="AWS Certification"
+        className="w-full fill p-0 rounded-t-4xl overflow-hidden"
+
       />,
       <div className="hover:cursor-pointer" >
         <a
@@ -30,8 +32,9 @@ export default function Certifications() {
       <Image
         width={80}
         height={80}
-        src="/udemy.png"
+        src="/images/testing_qa.jpg"
         alt="Udemy QA Certification"
+        className="w-full fill p-0 rounded-t-4xl overflow-hidden"
       />,
       <div>
         <a

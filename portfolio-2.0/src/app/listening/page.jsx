@@ -17,7 +17,7 @@ export default function Listening() {
           </p>
           <div className="flex">
             <h2 className="justify-left px-2">ARTISTS</h2>
-            <Image src="/recordPlayer.svg" width="30" height="30" />
+            <Image src="/images/recordPlayer.svg" width="30" height="30" />
           </div>
           <ArtistServerRender/>
           {/* <div className="flex">

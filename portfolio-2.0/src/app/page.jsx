@@ -102,7 +102,7 @@ export default function Home() {
 
       {/* Welcome Section */}
       <div className="snap-start snap-always sticky text-center flex flex-col w-[100vw] h-screen items-center bg-gradient-to-b from-indigo-900 to-purple-800 text-white justify-center">
-        <div className="align-middle inline-flex flex-col justify-center h-full items-center">
+        <div className="align-middle inline-flex flex-col justify-center h-full items-center p-5">
           <div>
             <h1 className="bigHeaderNotOblique text-center  transition-opacity duration-1000 ease-in opacity-100 p-0 ml-5">
               Tech Stack
@@ -152,7 +152,7 @@ export default function Home() {
               />
               <Image
                 className="rounded-3xl"
-                src="/techStack/Javascript-logo.png"
+                src="/techStack/javascript-logo.png"
                 alt="JavaScript Logo"
                 width={100}
                 height={100}
@@ -193,7 +193,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col snap-start snap-always items-center sticky text-center w-[100vw] h-screen bg-gradient-to-b from-purple-800 to-pink-800 text-white justify-center">
-        <div className="flex flex-col items-center justify-center align-middle h-full">
+        <div className="flex flex-col items-center justify-center align-middle h-full p-5">
           <div
             ref={animationReference}
             className={`${

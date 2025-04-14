@@ -7,7 +7,7 @@ export const data = [
       title: "Tatt2",
       subtitle: "Web Application",
       body: "A web application for tattoo artists and tattoo seekers.",
-      image: "/tatt2Landing.png",
+      image: "/images/tatt2Landing.png",
       techStack: "Adobe Indesign, Abobe Illustrator",
       src:"/portfolio/case/tatt2"
     },
@@ -15,7 +15,7 @@ export const data = [
       title: "Toot Brewery Management",
       subtitle: "Web Application",
       body: "A web application for taproom managers and brewers.",
-      image: "/tootBeerPage.png",
+      image: "/images/tootBeerPage.png",
       techStack: "Adobe Indesign, Abobe Illustrator",
       src:"/portfolio/case/toot"
     },
@@ -23,17 +23,17 @@ export const data = [
       title: "Portiko Technologies",
       subtitle: "Design Brief",
       body: "A portfolio showcasing logo, text, and color design for a faux company.",
-      image: "/portikoLogoGuide.png",
+      image: "/images/portikoLogoGuide.png",
       techStack: "Adobe Indesign, Abobe Illustrator",
-      headerImage: "/portikoLogoGuide.png",
-      exampleImage: "/portikoLogoGuide.png",
+      headerImage: "/images/portikoLogoGuide.png",
+      exampleImage: "/images/portikoLogoGuide.png",
       src:"/portfolio/case/portiko"
     },
     {
       title: "Big Neighborhood",
       subtitle: "Event Marketing",
       body: "A mockup event brief complete with website design, marketing materials, and insights into audience + reach.",
-      image: "/bigNeighborhoodLP.png",
+      image: "/images/bigNeighborhoodLP.png",
       techStack: "Adobe Indesign, Abobe Illustrator",
       src:"/portfolio/case/bigneighorhood"
     },

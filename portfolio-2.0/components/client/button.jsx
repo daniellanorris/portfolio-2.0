@@ -1,7 +1,6 @@
 import Arrow from "./arrow";
 
 export function Button({text, href}) {
-    console.log(href)
     return(
         <>
         <a href={href}>
