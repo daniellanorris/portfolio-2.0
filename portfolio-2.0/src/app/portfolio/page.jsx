@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../page.module.css";
-import PortfolioCard from "../../../components/server/portfolioCard";
+import PortfolioCard from "../../../components/client/portfolioCard";
 
 export const data = [
     {
@@ -9,7 +9,7 @@ export const data = [
       body: "A web application for tattoo artists and tattoo seekers.",
       image: "/tatt2Landing.png",
       techStack: "Adobe Indesign, Abobe Illustrator",
-      src:"/portfolio/tatt2"
+      src:"/portfolio/case/tatt2"
     },
     {
       title: "Toot Brewery Management",
@@ -17,7 +17,7 @@ export const data = [
       body: "A web application for taproom managers and brewers.",
       image: "/tootBeerPage.png",
       techStack: "Adobe Indesign, Abobe Illustrator",
-      src:"/portfolio/toot"
+      src:"/portfolio/case/toot"
     },
     {
       title: "Portiko Technologies",
@@ -27,7 +27,7 @@ export const data = [
       techStack: "Adobe Indesign, Abobe Illustrator",
       headerImage: "/portikoLogoGuide.png",
       exampleImage: "/portikoLogoGuide.png",
-      src:"/portfolio/portiko"
+      src:"/portfolio/case/portiko"
     },
     {
       title: "Big Neighborhood",
@@ -35,7 +35,7 @@ export const data = [
       body: "A mockup event brief complete with website design, marketing materials, and insights into audience + reach.",
       image: "/bigNeighborhoodLP.png",
       techStack: "Adobe Indesign, Abobe Illustrator",
-      src:"/portfolio/bigNeighorhood"
+      src:"/portfolio/case/bigneighorhood"
     },
   ];
     

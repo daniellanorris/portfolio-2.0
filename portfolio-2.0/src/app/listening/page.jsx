@@ -20,11 +20,11 @@ export default function Listening() {
             <Image src="/recordPlayer.svg" width="30" height="30" />
           </div>
           <ArtistServerRender/>
-          <div className="flex">
+          {/* <div className="flex">
             <p className="justify-self-start px-2">PLAYLISTS</p>
             <Image src="/recordPlayer.svg" width="30" height="30" />
           </div>
-          <hr className="w-[40%] mt-5"></hr>
+          <hr className="w-[40%] mt-5"></hr> */}
           {/* <Playlist></Playlist> */}
         </div>
       </div>

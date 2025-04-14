@@ -1,5 +1,8 @@
 "use client";
 
+import burger from '../../public/burger.svg'
+import purpleBurger from '../../public/burger-fuchsia.svg'
+
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,9 +23,9 @@ export default function Header() {
 
   return (
     <>
-      <header className={`navbar sticky top-0 z-50 hover:cursor-pointer  `}>
+      <header className={`navbar sticky top-0 z-50 hover:cursor-pointer`}>
         <Image
-          src={burgerHover ? "./burger-fuchsia.svg" : "./burger.svg"}
+          src={burgerHover ? purpleBurger : burger}
           width={40}
           height={40}
           alt="burger menu"
@@ -31,7 +34,7 @@ export default function Header() {
           onMouseLeave={handleHoverBurger}
           className={`${isOpen ?  "z-12 rounded" : ""}`}/>
         <div className={`${isOpen ? "z-10" : "hidden"}`}>
-          <div className={`flex flex-col m-2 p-8 rounded bg-white text-black ${isOpen ? "border-4 border-rounded border-fuchsia-600" : ""}`}>
+          <div className={`flex flex-col m-2 p-8 rounded bg-white text-black ${isOpen ? "border rounded-2xl" : ""}`}>
           <Link
             href="/"
             className="btn normal-case text-xl hover:text-fuchsia-300"

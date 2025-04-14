@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../page.module.css";
-import Card from "../../../components/server/card";
-import { Button } from "../../../components/server/button";
+import Card from "../../../components/client/card";
+import { Button } from "../../../components/client/button";
 
 export default function Certifications() {
   const buttonText = "View Certification";

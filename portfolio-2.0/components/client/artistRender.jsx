@@ -21,7 +21,7 @@ export default function ArtistsClientRender({ data }) {
               key={item.id}
               className="group h-70 w-70 sm:w-[400px] sm:h-[400px] flex-shrink-0 justify-center items-center m-10 drop-shadow-whiteGlow"
             >
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              <div className="relative h-full w-full rounded-xl shadow-xl transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] touch-manipulation:[transform:rotateY(180deg)]">
                 <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
                   <Image
                     src={item.images?.[0]?.url}
