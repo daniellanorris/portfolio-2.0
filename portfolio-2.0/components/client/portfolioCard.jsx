@@ -5,6 +5,7 @@ import X from "./x";
 import { Button } from "./button";
 
 export default function PortfolioCard({ data }) {
+  console.log(JSON.stringify(data)); 
   const [indexOpen, setIndexOpen] = useState(null);
 
   function triggerCardAction(i) {
@@ -52,8 +53,8 @@ export default function PortfolioCard({ data }) {
                     </p>
                     <br></br>
                   <p className="mb-10">{data[indexOpen]?.body}</p>
-      
-                  <a href={data[indexOpen]?.src}> <Button text="View Project"></Button></a>
+
+                  <Button href={data[indexOpen]?.src} text="View Project"></Button>
                   {/* <div className="flex flex-col sm:flex-row justify-between mt-4">
                     {data[indexOpen].image == null ? (
                       <> Loading</>
