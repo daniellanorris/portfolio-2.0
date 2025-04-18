@@ -32,7 +32,7 @@ export default function Certifications() {
       <Image
         width={1000}
         height={1000}
-        src="/images/testing_qa.jpg"
+        src="/images/computer.jpg"
         alt="Udemy QA Certification"
         className="w-full fill p-0 rounded-t-4xl overflow-hidden"
       />,

@@ -59,26 +59,26 @@ export default function Home() {
             </div>
             <div className="sm:inline-flex">
               <div className="sm:w-[75vw] pr-10 sm-pr-0">
-            <div className="border-white rounded-3xl border-r-8 w-[100%] mt-5">
-              <p className="p-5">
-                {" "}
-                Hey! I'm <b className="text-emerald-400">Dani Norris</b>, a
-                front-end web developer on a journey to discover how we can
-                optimize products for end-users. I have a large swath of
-                experience in software, POS and ERP systems, API interactions,
-                and the restaurant industry.{" "}
-              </p>
+                <div className="border-white rounded-3xl border-r-8 w-[100%] mt-5">
+                  <p className="p-5">
+                    {" "}
+                    Hey! I'm <b className="text-emerald-400">Dani Norris</b>, a
+                    front-end web developer on a journey to discover how we can
+                    optimize products for end-users. I have a large swath of
+                    experience in software, POS and ERP systems, API
+                    interactions, and the restaurant industry.{" "}
+                  </p>
+                </div>
+                <div className="flex justify-left gap-4 p-5">
+                  <Button
+                    text="Contact Me"
+                    className="hover:cursor-pointer"
+                    href="/feedback">
+                    <p>Contact Me</p>
+                  </Button>
+                </div>
               </div>
-              <div className="flex justify-left gap-4 p-5">
-                <Button
-                  text="Contact Me"
-                  className="hover:cursor-pointer"
-                  href="/feedback">
-                  <p>Contact Me</p>
-                </Button>
-              </div>
-            </div>
-            {/* <div className="flex justify-center mt-5">
+              {/* <div className="flex justify-center mt-5">
             <Image
             src='/me.jpeg'
             width={300}
@@ -120,7 +120,7 @@ export default function Home() {
             }`}>
             <div className="flex flex-wrap gap-4 items-center mt-10 justify-center">
               <h2> Languages & Frameworks </h2>
-              <div className="">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
                 <Image
                   src="/techStack/logo_dark.svg"
                   alt="Logo Dark"
@@ -133,51 +133,59 @@ export default function Home() {
                 alt="Node.js Logo"
                 width={100}
                 height={100}
+                className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
               />
 
-              <div className="bg-white rounded-3xl w-[110px] h-[110px] flex gap-4 ">
-                <Image
-                  src="/techStack/tailwindcss-logotype.svg"
-                  alt="Tailwind CSS Logo"
-                  width={100}
-                  height={100}
-                />
-              </div>
+
+
+               
+   
+
               <Image
                 className="rounded-3xl"
                 src="/techStack/express.png"
                 alt="Express.js Logo"
                 width={100}
-                height={100}
+                height={50}
+                
               />
+   
               <Image
-                className="rounded-3xl"
+                className="rounded-3xl w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
                 src="/techStack/javascript-logo.png"
                 alt="JavaScript Logo"
                 width={100}
                 height={100}
               />
               <Image
-                className="rounded-3xl"
+                className="rounded-3xl w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
                 src="/techStack/docker.png"
                 alt="Docker Logo"
                 width={100}
                 height={100}
+              
               />
               <Image
-                className="rounded-3xl"
+                className="rounded-3xl w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
                 src="/techStack/css.png"
                 alt="CSS Logo"
                 width={100}
                 height={100}
               />
-                <Image
-                className="rounded-3xl"
+              <Image
+                className="rounded-3xl w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
                 src="/techStack/html.png"
                 alt="HTML Logo"
                 width={100}
                 height={100}
               />
+               <Image
+                  className="rounded-3xl bg-white p-4"
+                  src="/techStack/tailwindcss-logotype.svg"
+                  alt="Tailwind CSS Logo"
+                  width={100}
+                  height={100}
+                />
             </div>
           </div>
 
@@ -185,6 +193,7 @@ export default function Home() {
             <Image
               src="/images/arrowWhite.svg"
               alt="Arrow"
+
               width={24}
               height={24}
               className="animate-bounce justify-self-center"
@@ -209,8 +218,9 @@ export default function Home() {
                   height={100}
                 />
 
-                <div className="bg-white rounded-3xl p-1 flex gap-4">
+                <div className="bg-white rounded-3xl p-1 flex gap-4 ">
                   <Image
+                  className="rounded-3xl w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
                     src="/techStack/mongo.png"
                     alt="MongoDB Logo"
                     width={100}
@@ -218,24 +228,24 @@ export default function Home() {
                   />
                 </div>
                 <Image
-                    src="/techStack/sql.png"
-                    alt="Docker Logo"
-                    width={100}
-                    height={100}
-                  />
+                  src="/techStack/sql.png"
+                  alt="SQL Logo"
+                  width={100}
+                  height={100}
+                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
+                />
               </div>
             </div>
-        
           </div>
           <div className="justify-content-center mt-10">
-          <Image
+            <Image
               src="/images/arrowWhite.svg"
               alt="Arrow"
               width={24}
               height={24}
               className="animate-bounce justify-self-center"
             />
-            </div>
+          </div>
         </div>
       </div>
 
