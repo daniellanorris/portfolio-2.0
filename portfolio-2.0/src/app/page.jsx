@@ -59,7 +59,7 @@ export default function Home() {
             </div>
             <div className="sm:inline-flex">
               <div className="pr-10 sm-pr-0">
-                <div className="border-white rounded-3xl border-r-8 w-[80%] mt-5 animate-in">
+                <div className="border-white rounded-3xl border-r-8 w-[100%] sm:w-[80%] mt-5 animate-in">
                   <p className="p-5 animate-in">
                     {" "}
                     Hey! I'm <b className="text-emerald-400 animate-in">Dani Norris</b>, a
