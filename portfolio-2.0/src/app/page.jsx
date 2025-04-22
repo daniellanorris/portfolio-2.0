@@ -50,24 +50,32 @@ export default function Home() {
     <div
       className={`${styles.page} snap-y snap-mandatory overflow-y-scroll h-screen`}>
       {/* Full-width Hero Section */}
-      <div className="w-full max-w-[100vw] h-screen sticky flex flex-col justify-items-center justify-center bg-gradient-to-b from-black to-indigo-900 snap-start snap-mandatory">
+      <div className="w-full max-w-[100vw] h-screen flex flex-col justify-items-center justify-center bg-gradient-to-b from-black to-indigo-900 snap-start snap-mandatory">
         <div className="grid md:grid-cols-4 grid-cols-1">
           {/* First Column */}
           <div className="col-span-1 md:col-span-3">
             <div className="bigHeader text-left leading-none text-6xl sm:text-[150px] tracking-tight">
-              <div className="animate-in"><b className=" text-emerald-200">Web</b></div> <div className="animate-in">Developer</div>
+              <div className="animate-in">
+                <b className=" text-emerald-200">Web</b>
+              </div>{" "}
+              <div className="animate-in">Developer.</div>
             </div>
             <div className="sm:inline-flex">
               <div className="pr-10 sm-pr-0">
                 <div className="border-white rounded-3xl border-r-8 w-[100%] sm:w-[80%] mt-5 animate-in">
                   <p className="p-5 animate-in">
                     {" "}
-                    Hey! I'm <b className="text-emerald-400 animate-in">Dani Norris</b>, a
-                    front-end web developer on a journey to discover how we can
-                    optimize products for end-users. I have a large swath of
+                    Hey! I'm{" "}
+                    <b className="text-emerald-400 animate-in">Dani Norris</b>,
+                    a front-end web developer on a journey to discover how we
+                    can optimize products for end-users. I have a large swath of
                     experience in software, POS and ERP systems, API
                     interactions, and the restaurant industry.{" "}
                   </p>
+                  <div className="flex align-middle text-center items-center p-5">
+                    
+                    <p> <b>Location:</b> Denver, CO</p>
+                  </div>
                 </div>
                 <div className="flex justify-left gap-4 p-5 animate-in">
                   <Button
@@ -88,22 +96,27 @@ export default function Home() {
             </div>
           </div>
           <div className="flex justify-center mt-5 items-start">
-          <div className="col-span-1 md:col-start-4 md:flex inline-flex md:flex-col justify-center justify-items-center justify-content-center space-x-5"> 
-            <a href="https://github.com/daniellanorris?tab=repositories"><img 
-            width="50px"
-            height="auto"
-            src='/images/github-mark-fuchsia.svg'
-            className="animate-in"></img></a>
-            <a href="https://www.linkedin.com/in/daniella-norris/">
-             <img 
-            width="50px"
-            height="auto"
-            src='/images/LinkedIn_icon.svg'
-            className="animate-in md:mt-5 border-4 border-fuchsia-500 p-1 rounded-2xl"></img></a>
-          </div>
+            <div className="col-span-1 md:col-start-4 md:flex inline-flex md:flex-col justify-center justify-items-center justify-content-center space-x-5">
+              <a href="https://github.com/daniellanorris?tab=repositories">
+                <img
+                  width="50px"
+                  height="auto"
+                  src="/images/github-mark-fuchsia.svg"
+                  className="animate-in"></img>
+              </a>
+              <a href="https://www.linkedin.com/in/daniella-norris/">
+                <img
+                  width="50px"
+                  height="auto"
+                  src="/images/LinkedIn_icon.svg"
+                  className="animate-in md:mt-5 border-4 border-fuchsia-500 p-1 rounded-2xl"></img>
+              </a>
+            </div>
           </div>
 
-          <div className="flex justify-center w-full">
+          
+        </div>
+        <div className="flex justify-center w-full">
             <Image
               src="/images/arrowWhite.svg"
               alt="Arrow"
@@ -112,21 +125,20 @@ export default function Home() {
               className="z-20 animate-bounce mt-5 sm:mt-20"
             />
           </div>
-        </div>
       </div>
 
       {/* Welcome Section */}
-      <div className="snap-start snap-always sticky text-center flex flex-col w-[100vw] h-screen items-center bg-gradient-to-b from-indigo-900 to-purple-800 text-white justify-center">
+      <div className="snap-start snap-always text-center flex flex-col w-[100vw] h-screen items-center bg-gradient-to-b from-indigo-900 to-purple-800 text-white justify-center">
+     
         <div className="align-middle inline-flex flex-col justify-center h-full items-center p-5">
           <div>
-            <h1 className="bigHeaderNotOblique text-center  transition-opacity duration-1000 ease-in opacity-100 p-0 ml-5">
-              Tech Stack
-            </h1>
-            <p>
-              {" "}
-              Here are some of the tools and frameworks I use for web
-              development.
-            </p>
+          <div className="bigHeader text-center leading-none text-6xl sm:text-[150px] tracking-tight">
+              <div className="animate-in">
+                <b className=" text-emerald-200">Tech</b>
+              </div>{" "}
+              <div className="animate-in">Stuff.</div>
+            </div>
+          
           </div>
           <div
             ref={animationReference}
@@ -208,7 +220,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col snap-start snap-always items-center sticky text-center w-[100vw] h-screen bg-gradient-to-b from-purple-800 to-pink-800 text-white justify-center">
+      <div className="flex flex-col snap-start snap-always items-center text-center w-[100vw] h-screen bg-gradient-to-b from-purple-800 to-pink-800 text-white justify-center">
         <div className="flex flex-col items-center justify-center align-middle h-full p-5">
           <div
             ref={animationReference}
@@ -216,7 +228,14 @@ export default function Home() {
               animationReference ? `inline-flex items-center` : `opacity-0`
             }`}>
             <div>
+            <div className="bigHeader text-center leading-none text-6xl sm:text-[150px] tracking-tight">
+              <div className="animate-in">
+                <b className=" text-emerald-200">More</b>
+              </div>{" "}
+              <div className="animate-in">Tech Stuff.</div>
+            </div>
               <div className="flex flex-wrap gap-4 items-center mt-10 justify-center">
+                
                 <h2> Database Solutions </h2>
                 <Image
                   src="/techStack/aws.png"
@@ -257,40 +276,22 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <main className="snap-start snap-always w-[100vw] grid grid-cols-12 gap-2 p-10 flex-col sticky items-center h-screen justify-center bg-gradient-to-b from-pink-800 to-black text-white">
-        {data.map((item, index) => (
-          <div
-            key={index}
-            onClick={() => openPortfolioCard(index)}
-            className="text-xs grid col-span-12 border-rounded sm:h-1/2 rounded-3xl sm:col-span-6 p-6 bg-white text-black hover:bg-fuchsia-500 scale-100 hover:scale-[1.1] hover:z-20 transition-transform duration-300">
-            <h2 className="text-sm col-span-2 md:col-span-1 hover:cursor-pointer">
-              {item.title}
-            </h2>
-          </div>
-        ))}
-        {openPortfolio !== null ? (
-          <div className="backdrop-blur-lg backdrop-blur-fix h-[100%] w-full fixed left-0 flex justify-center items-center z-50 bg-black/50">
-            <div className="mt-4 text-left bg-black border-fuchsia-400 border-r-8 border-b-8 rounded-2xl w-[90vw] sm:w-[75vw] h-[75vh] relative p-10 text-white">
-              <div
-                className="hover:cursor-pointer"
-                onClick={() => setIsOpenPortfolio(null)}>
-                {" "}
-                X
-              </div>
-
-              <h1> {data[openPortfolio].title} </h1>
-              <h2> {data[openPortfolio].subtitle}</h2>
-              <p> {data[openPortfolio].techStack}</p>
-              <p> {data[openPortfolio].body}</p>
-              <Button
-                className="hover:cursor-pointer"
-                href={data[openPortfolio].src}>
-                {" "}
-                <p>Go to page</p>{" "}
-              </Button>
+      <main className="snap-start snap-always w-[100vw] p-10 space-y-8 flex flex-col align-middle items-center h-screen justify-center justify-items-center bg-gradient-to-b from-pink-800 to-black text-white">
+      <div className="bigHeader text-left leading-none text-6xl sm:text-[150px] tracking-tight">
+              <div className="animate-in">
+                <b className=" text-emerald-200">The</b>
+              </div>{" "}
+              <div className="animate-in">Good Stuff.</div>
             </div>
-          </div>
-        ) : null}
+        <p> Interested in seeing my work?</p>
+        <Button
+          href="/portfolio"
+          text="View Projects"
+          className="items-center"></Button>
+        <p> Or, to heck with my work. Let's cut to the chase.</p>
+        <a href="/techStack/Resume_Norris_Current.pdf" download>
+          <Button text="Download Portfolio" className="items-center"></Button>
+        </a>
       </main>
     </div>
   );

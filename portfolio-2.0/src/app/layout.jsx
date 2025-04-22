@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
           
           (<>
        
-           <div className="items-center flex-col flex h-screen">
+           <div className="items-center flex-col flex min-h-screen">
 
             <div className="h-[35vh] flex flex-col animate-pulse justify-center items-center m-10">
             <h1> Site generating...</h1>
