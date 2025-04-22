@@ -161,7 +161,7 @@ export default function Home() {
 
               <Image
                 className="rounded-3xl w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
-                src="/techStack/javascript-logo.png"
+                src="/techStack/javascriptlogo.png"
                 alt="JavaScript Logo"
                 width={100}
                 height={100}
