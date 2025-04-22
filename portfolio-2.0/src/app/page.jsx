@@ -48,9 +48,9 @@ export default function Home() {
 
   return (
     <div
-      className={`${styles.page} snap-y snap-mandatory overflow-y-scroll h-screen`}>
+      className={`${styles.page} snap-y snap-mandatory overflow-y-scroll h-screen mt-0 top-0`}>
       {/* Full-width Hero Section */}
-      <div className="w-full max-w-[100vw] h-screen flex flex-col justify-items-center justify-center bg-gradient-to-b from-black to-indigo-900 snap-start snap-mandatory">
+      <div className="w-full max-w-[100vw] h-screen flex flex-col justify-items-center mt-0 top-0 justify-center bg-gradient-to-b from-black to-indigo-900 snap-start snap-mandatory">
         <div className="grid md:grid-cols-4 grid-cols-1">
           {/* First Column */}
           <div className="col-span-1 md:col-span-3">
@@ -61,9 +61,9 @@ export default function Home() {
               <div className="animate-in">Developer.</div>
             </div>
             <div className="sm:inline-flex">
-              <div className="pr-10 sm-pr-0">
-                <div className="border-white rounded-3xl border-r-8 w-[100%] sm:w-[80%] mt-5 animate-in">
-                  <p className="p-5 animate-in">
+              <div className="pr-6 sm-pr-0">
+                <div className="border-white rounded-3xl border-r-6 w-[100%] sm:w-[80%] mt-5 animate-in">
+                  <p className="p-5 pb-0 animate-in">
                     {" "}
                     Hey! I'm{" "}
                     <b className="text-emerald-400 animate-in">Dani Norris</b>,
@@ -77,7 +77,7 @@ export default function Home() {
                     <p> <b>Location:</b> Denver, CO</p>
                   </div>
                 </div>
-                <div className="flex justify-left gap-4 p-5 animate-in">
+                <div className="flex justify-left gap-4 pl-5 pb-2 sm:p-5 animate-in">
                   <Button
                     text="Contact Me"
                     className="hover:cursor-pointer"
@@ -276,8 +276,8 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <main className="snap-start snap-always w-[100vw] p-10 space-y-8 flex flex-col align-middle items-center h-screen justify-center justify-items-center bg-gradient-to-b from-pink-800 to-black text-white">
-      <div className="bigHeader text-left leading-none text-6xl sm:text-[150px] tracking-tight">
+      <main className="snap-start snap-always w-[100vw] p-10 space-y-8 flex flex-col align-middle items-center h-screen justify-center justify-items-center mt-0 bg-gradient-to-b from-pink-800 to-black text-white">
+      <div className="mt-0 bigHeader text-left leading-none text-6xl sm:text-[150px] tracking-tight">
               <div className="animate-in">
                 <b className=" text-emerald-200">The</b>
               </div>{" "}
