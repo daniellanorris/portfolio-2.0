@@ -10,35 +10,26 @@ import animateInView from "../../controllers/animateInView";
 export default function Home() {
   const [pageLoad, setPageLoad] = useState(false);
   const [openPortfolio, setIsOpenPortfolio] = useState(null);
-  const animationReference = useRef(null);
+  const animationReference1 = useRef(null);
+  const animationReference2 = useRef(null);
+  const animationReference3 = useRef(null);
 
   useEffect(() => {
-    if (animationReference.current) {
-      animateInView(animationReference);
-      console.log("Animation reference set", animationReference.current);
+    if (animationReference1.current) {
+      animateInView(animationReference1);
+      console.log("Animation reference set", animationReference1.current);
+    }
+    if (animationReference2.current) {
+      animateInView(animationReference2);
+      console.log("Animation reference set", animationReference2.current);
+    }
+    if (animationReference3.current) {
+      animateInView(animationReference3);
+      console.log("Animation reference set", animationReference3.current);
     }
   }, []);
 
-  async function openPortfolioCard(index) {
-    setIsOpenPortfolio((prev) => (prev === index ? null : index));
-  }
 
-  const text = [
-    [
-      <ul>
-        <li>Rock Climbing</li>
-        <li>Illustration</li>
-        <li>Oil Painting</li>
-        <li>Snowboarding</li>
-        <li>Petting my cats (Arson and Gibb)</li>
-      </ul>,
-    ],
-    [
-      <h1> Dani Norris</h1>,
-      <b>(She/her)</b>,
-      "The goal is to inspire end-users to fully take control of the product in question. With a strong background in web design, customer success, and the hospitality industry, I am uniquely positioned to provide real-world insight to clients.",
-    ],
-  ];
 
   useEffect(() => {
     setPageLoad(true);
@@ -128,23 +119,24 @@ export default function Home() {
       </div>
 
       {/* Welcome Section */}
-      <div className="snap-start snap-always text-center flex flex-col w-[100vw] align-middle h-screen bg-gradient-to-b from-indigo-900 to-purple-800 text-white justify-center">
-     
-        <div className="align-middle inline-flex flex-col h-full p-5">
+      <div className="flex flex-col snap-start snap-always items-center w-[100vw] min-h-screen bg-gradient-to-b from-indigo-900 to-purple-800 text-white justify-center">
+      <div className="flex flex-col items-center justify-center align-middle h-full pb-0">
+      <div
+            ref={animationReference1}
+            className={`opacity-0 ${
+              animationReference1 ? `opacity-100` : ``
+            }`}>
+          
           <div>
-          <div className="bigHeader text-right leading-none text-6xl sm:text-[150px] tracking-tight">
-              <div className="animate-in">
+          <div className="bigHeader text-right w-[100vw] pr-10 leading-none text-6xl sm:text-[150px] tracking-tight">
+              <div>
                 <b className=" text-emerald-200">Tech</b>
               </div>{" "}
-              <div className="animate-in">Stuff.</div>
+              <div>Stuff.</div>
             </div>
           
           </div>
-          <div
-            ref={animationReference}
-            className={`${
-              animationReference ? `inline-flex items-center` : `opacity-0`
-            }`}>
+       
             <div className="flex flex-wrap gap-4 items-center mt-10 justify-center">
               <h2> Languages & Frameworks </h2>
               <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
@@ -223,16 +215,16 @@ export default function Home() {
       <div className="flex flex-col snap-start snap-always items-center text-center w-[100vw] min-h-screen bg-gradient-to-b from-purple-800 to-pink-800 text-white justify-center">
         <div className="flex flex-col items-center justify-center align-middle h-full p-5 pb-0">
           <div
-            ref={animationReference}
+            ref={animationReference2}
             className={`${
-              animationReference ? `inline-flex items-center` : `opacity-0`
+              animationReference2 ? `inline-flex items-center` : `opacity-0`
             }`}>
             <div>
             <div className="bigHeader text-left leading-none text-6xl sm:text-[150px] tracking-tight">
-              <div className="animate-in">
+              <div>
                 <b className=" text-emerald-200">More</b>
               </div>{" "}
-              <div className="animate-in">Tech Stuff.</div>
+              <div>Tech Stuff.</div>
             </div>
               <div className="flex flex-wrap gap-4 items-center mt-10 justify-center">
                 
@@ -269,27 +261,29 @@ export default function Home() {
               alt="Arrow"
               width={24}
               height={24}
-              className="transition animate-in justify-self-center"
+              className="transition justify-self-center"
             />
           </div>
         </div>
       </div>
 
 
-      <main className="snap-start snap-always w-[100vw] space-y-6 h-[100vh] flex pb-20 flex-col align-middle items-center justify-center justify-items-center p-5 bg-gradient-to-b from-pink-800 to-black text-white">
+      <main  ref={animationReference3} className="snap-start snap-always w-[100vw] overflow-y-scroll space-y-6 h-[100vh] flex pb-20 flex-col align-middle items-center justify-center justify-items-center p-5 bg-gradient-to-b from-pink-800 to-black text-white">
+   
       <div className="mt-0 bigHeader text-right leading-none text-6xl sm:text-[150px] tracking-tight">
-              <div className="animate-in">
+    
+  <div>
                 <b className=" text-emerald-200">The</b>
               </div>{" "}
-              <div className="animate-in">Good Stuff.</div>
-      
+              <div>Good Stuff.</div>
+            </div>
         <p> Interested in seeing my work?</p>
         <Button
           href="/portfolio"
           text="View Projects"
           className="items-center"></Button>
         <p> Or, to heck with my work. Let's cut to the chase.</p>
-        </div>
+ 
           <Button text="Download Portfolio" className="items-center" href="/techStack/Resume_Norris_Current.pdf" download></Button>
 
       </main>

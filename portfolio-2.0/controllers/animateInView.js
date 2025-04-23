@@ -7,11 +7,9 @@ export default function animateInView(ref) {
           entry.target.classList.add('animate-in');
 
         }
-        if (!entry.isIntersecting) {
-          entry.target.classList.add('animate-out');
-        }
+       
       },
-      { threshold: 0.1 },
+      { threshold: .05},
 
 
     );
