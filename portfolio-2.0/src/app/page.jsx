@@ -48,9 +48,9 @@ export default function Home() {
 
   return (
     <div
-      className={`${styles.page} snap-y snap-mandatory overflow-y-scroll h-screen mt-0 top-0`}>
+      className={`${styles.page} snap-y snap-mandatory overflow-y-scroll h-[100vh]`}>
       {/* Full-width Hero Section */}
-      <div className="w-full max-w-[100vw] h-screen flex flex-col justify-items-center mt-0 top-0 justify-center bg-gradient-to-b from-black to-indigo-900 snap-start snap-mandatory">
+      <div className="w-full h-[100vh] flex flex-col justify-items-center justify-center bg-gradient-to-b from-black to-indigo-900 snap-start snap-mandatory">
         <div className="grid md:grid-cols-4 grid-cols-1">
           {/* First Column */}
           <div className="col-span-1 md:col-span-3">
@@ -128,11 +128,11 @@ export default function Home() {
       </div>
 
       {/* Welcome Section */}
-      <div className="snap-start snap-always text-center flex flex-col w-[100vw] h-screen items-center bg-gradient-to-b from-indigo-900 to-purple-800 text-white justify-center">
+      <div className="snap-start snap-always text-center flex flex-col w-[100vw] align-middle h-screen bg-gradient-to-b from-indigo-900 to-purple-800 text-white justify-center">
      
-        <div className="align-middle inline-flex flex-col justify-center h-full items-center p-5">
+        <div className="align-middle inline-flex flex-col h-full p-5">
           <div>
-          <div className="bigHeader text-center leading-none text-6xl sm:text-[150px] tracking-tight">
+          <div className="bigHeader text-right leading-none text-6xl sm:text-[150px] tracking-tight">
               <div className="animate-in">
                 <b className=" text-emerald-200">Tech</b>
               </div>{" "}
@@ -220,15 +220,15 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col snap-start snap-always items-center text-center w-[100vw] h-screen bg-gradient-to-b from-purple-800 to-pink-800 text-white justify-center">
-        <div className="flex flex-col items-center justify-center align-middle h-full p-5">
+      <div className="flex flex-col snap-start snap-always items-center text-center w-[100vw] min-h-screen bg-gradient-to-b from-purple-800 to-pink-800 text-white justify-center">
+        <div className="flex flex-col items-center justify-center align-middle h-full p-5 pb-0">
           <div
             ref={animationReference}
             className={`${
               animationReference ? `inline-flex items-center` : `opacity-0`
             }`}>
             <div>
-            <div className="bigHeader text-center leading-none text-6xl sm:text-[150px] tracking-tight">
+            <div className="bigHeader text-left leading-none text-6xl sm:text-[150px] tracking-tight">
               <div className="animate-in">
                 <b className=" text-emerald-200">More</b>
               </div>{" "}
@@ -275,23 +275,23 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Main Content */}
-      <main className="snap-start snap-always w-[100vw] p-10 space-y-8 flex flex-col align-middle items-center h-screen justify-center justify-items-center mt-0 bg-gradient-to-b from-pink-800 to-black text-white">
-      <div className="mt-0 bigHeader text-left leading-none text-6xl sm:text-[150px] tracking-tight">
+
+      <main className="snap-start snap-always w-[100vw] space-y-6 h-[100vh] flex pb-20 flex-col align-middle items-center justify-center justify-items-center p-5 bg-gradient-to-b from-pink-800 to-black text-white">
+      <div className="mt-0 bigHeader text-right leading-none text-6xl sm:text-[150px] tracking-tight">
               <div className="animate-in">
                 <b className=" text-emerald-200">The</b>
               </div>{" "}
               <div className="animate-in">Good Stuff.</div>
-            </div>
+      
         <p> Interested in seeing my work?</p>
         <Button
           href="/portfolio"
           text="View Projects"
           className="items-center"></Button>
         <p> Or, to heck with my work. Let's cut to the chase.</p>
-        <a href="/techStack/Resume_Norris_Current.pdf" download>
-          <Button text="Download Portfolio" className="items-center"></Button>
-        </a>
+        </div>
+          <Button text="Download Portfolio" className="items-center" href="/techStack/Resume_Norris_Current.pdf" download></Button>
+
       </main>
     </div>
   );
